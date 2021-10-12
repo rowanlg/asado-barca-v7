@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: Dker;
     color: #fafafa;
+    background-color: black;
     p {
       font-family: "Asado-Body";
     }
