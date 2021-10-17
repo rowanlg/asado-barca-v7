@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     color: #fafafa;
     background-color: black;
     p {
-      font-family: "Asado-Body";
+      font-family: Abel;
       font-size: 1.2rem;
     }
   }
