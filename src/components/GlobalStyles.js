@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Dker";
+    src: url("../assets/fonts/Dker-Poster.ttf");
+  }
   body {
     font-family: Dker;
     color: #fafafa;

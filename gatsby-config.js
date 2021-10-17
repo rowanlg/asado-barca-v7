@@ -25,10 +25,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
-        custom: {
-          families: ["Dker"],
-          urls: ["static/fonts/fonts.css"],
-        },
         google: {
           families: ["Abel"],
         },
