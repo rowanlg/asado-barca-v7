@@ -22,5 +22,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Dker, Asado-Body"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
   ],
 }

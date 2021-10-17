@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import BgImages from "./BgImages"
+// import BgImages from "./BgImages"
 
 const query = graphql`
   {
@@ -33,20 +33,20 @@ const Menu = () => {
   const menuImagesData = useStaticQuery(query)
   const { menuImages } = menuImagesData.allContentfulAsadoBarcelona.nodes[0]
   return (
-    <BgImages imgId={1}>
-      <MenuSection id="menu">
-        {menuImages.map((image, index) => {
-          return (
-            <GatsbyImage
-              image={image.gatsbyImageData}
-              key={index}
-              alt={`Menu Item #${index + 1}`}
-              className="menu-image"
-            />
-          )
-        })}
-      </MenuSection>
-    </BgImages>
+    // <BgImages imgId={1}>
+    <MenuSection id="menu">
+      {menuImages.map((image, index) => {
+        return (
+          <GatsbyImage
+            image={image.gatsbyImageData}
+            key={index}
+            alt={`Menu Item #${index + 1}`}
+            className="menu-image"
+          />
+        )
+      })}
+    </MenuSection>
+    // </BgImages>
   )
 }
 

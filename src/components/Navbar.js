@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { FiMenu, FiX } from "react-icons/fi"
+import Logo from "../assets/images/asado-logo-barcelona-2.svg"
 
 const Header = styled.header`
   width: 100vw;
@@ -111,12 +112,13 @@ const Navbar = () => {
     <Header>
       <div className="nav-container">
         <Link to="/">
-          <StaticImage
+          {/* <StaticImage
             src="../assets/images/asado-logo-barcelona-2.png"
             alt="Asado Barcelona Logo"
             placeholder="blurred"
             layout="constrained"
-          />
+          /> */}
+          <img src={Logo} alt="Asado Barcelona Logo" />
         </Link>
         <FiMenu
           className={showLinks ? "hide-menu-icon" : "drop-menu-icon"}
