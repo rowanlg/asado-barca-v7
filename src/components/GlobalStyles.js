@@ -5,13 +5,13 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Dker';
     font-style: normal;
     src: local('Dker-Poster'),
-    url('../fonts/Dker-Poster.ttf') format('ttf')
+    url('../assets/fonts/Dker-Poster.ttf') format('ttf')
   }
   @font-face {
       font-family: 'Asado-Body';
       font-style: normal;
       src: local('Asado-Body'),
-      url('../fonts/asado-body-text.ttf') format('ttf')
+      url('../assets/fonts/asado-body-text.ttf') format('ttf')
   }
   body {
     font-family: Dker;
