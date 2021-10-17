@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: black;
     p {
       font-family: "Asado-Body";
+      font-size: 1.2rem;
     }
   }
 `

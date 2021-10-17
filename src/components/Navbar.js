@@ -10,8 +10,10 @@ const Header = styled.header`
     margin-top: 1rem;
     z-index: 98;
     height: 80px;
+    max-height: 80px;
     @media screen and (min-width: 460px) {
       height: 100px;
+      max-height: 100px;
     }
   }
   .nav-container {
