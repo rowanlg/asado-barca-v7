@@ -5,6 +5,7 @@ import HomeSection from "../components/HomeSection"
 // import Menu from "../components/Menu"
 import MenuSvg from "../components/MenuSvg"
 import About from "../components/About"
+import Book from "../components/Book"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       {/* <Menu /> */}
       <MenuSvg />
       <About />
+      <Book />
     </Layout>
   )
 }

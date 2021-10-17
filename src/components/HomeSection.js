@@ -18,14 +18,15 @@ const Home = styled.section`
     text-decoration: none;
   }
   .link-box {
-    border: 4px solid #fafafa;
+    border: 3px solid #fafafa;
     color: #fafafa;
     text-align: center;
-    padding: 1.2rem 1.2rem;
+    padding: 1.4rem 1.2rem 1.2rem 1.2rem;
     font-size: 0.9rem;
     margin: auto;
     @media screen and (min-width: 460px) {
-      padding: 1.5rem;
+      border: 4px solid #fafafa;
+      padding: 1.8rem 1.5rem 1.5rem 1.5rem;
       font-size: 1.2rem;
       width: 300px;
     }
