@@ -8,6 +8,7 @@ const ErrorWrapper = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 8rem;
   a {
     text-decoration: none;
     color: #f2b850;

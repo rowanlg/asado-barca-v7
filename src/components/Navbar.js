@@ -7,6 +7,9 @@ import Logo from "../assets/images/asado-logo-barcelona-2.svg"
 
 const Header = styled.header`
   width: 100vw;
+  .asado-img-link {
+    z-index: 98;
+  }
   img {
     margin-top: 1rem;
     z-index: 98;
@@ -111,7 +114,7 @@ const Navbar = () => {
   return (
     <Header>
       <div className="nav-container">
-        <Link to="/">
+        <Link to="/" className="asado-img-link">
           <img src={Logo} alt="Asado Barcelona Logo" />
         </Link>
         <FiMenu
@@ -129,13 +132,13 @@ const Navbar = () => {
           }}
         />
         <div className="desktop-links">
-          <a href="#menu">Menu</a>
-          <a href="#about">About</a>
-          <a href="#book">Book</a>
+          <a href="/#menu">Menu</a>
+          <a href="/#about">About</a>
+          <a href="/#book">Book</a>
           <a href="https://ubereats.com" target="_blank" rel="noreferrer">
             Delivery
           </a>
-          <a href="#contact">Contact</a>
+          <a href="/#contact">Contact</a>
         </div>
       </div>
       <div
@@ -144,13 +147,13 @@ const Navbar = () => {
           setShowLinks(false)
         }}
       >
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#book">Book</a>
+        <a href="/#menu">Menu</a>
+        <a href="/#about">About</a>
+        <a href="/#book">Book</a>
         <a href="https://ubereats.com" target="_blank" rel="noreferrer">
           Delivery
         </a>
-        <a href="#contact">Contact</a>
+        <a href="/#contact">Contact</a>
       </div>
     </Header>
   )
