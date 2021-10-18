@@ -33,7 +33,7 @@ const Book = () => {
   }, [])
   return (
     <BgImages imgId={0}>
-      <Section>
+      <Section id="book">
         <div id="open-table" />
       </Section>
     </BgImages>

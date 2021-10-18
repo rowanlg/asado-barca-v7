@@ -40,7 +40,7 @@ const Section = styled.section`
 const Contact = () => {
   return (
     <BgImages imgId={1}>
-      <Section>
+      <Section id="contact">
         <div className="map-section">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.125441596119!2d2.147384715425964!3d41.39308207926357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a32519083271%3A0xbac256f23168a4d6!2sAsado%20Hamburguesas!5e0!3m2!1sen!2snl!4v1634480436040!5m2!1sen!2snl"

@@ -40,13 +40,18 @@ const MenuSection = styled.section`
 const MenuSvg = () => {
   const menuImagesData = useStaticQuery(query)
   const { menuImagesSvg } = menuImagesData.allContentfulAsadoBarcelona.nodes[0]
-  console.log(menuImagesSvg)
   return (
     <BgImages imgId={1}>
       <MenuSection id="menu">
         {menuImagesSvg.map((image, index) => {
-          console.log(image.file.url)
-          return <img src={image.file.url} className="svg-img" />
+          return (
+            <img
+              src={image.file.url}
+              key={index}
+              className="svg-img"
+              alt={`Menu Image ${index + 1}`}
+            />
+          )
         })}
       </MenuSection>
     </BgImages>

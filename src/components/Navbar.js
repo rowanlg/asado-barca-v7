@@ -112,12 +112,6 @@ const Navbar = () => {
     <Header>
       <div className="nav-container">
         <Link to="/">
-          {/* <StaticImage
-            src="../assets/images/asado-logo-barcelona-2.png"
-            alt="Asado Barcelona Logo"
-            placeholder="blurred"
-            layout="constrained"
-          /> */}
           <img src={Logo} alt="Asado Barcelona Logo" />
         </Link>
         <FiMenu
