@@ -50,7 +50,12 @@ module.exports = {
         display: `standalone`,
         icon: `src/assets/images/asado-icon.png`,
         icons: [
-          { src: `src/assets/images/asado-icon.png`, purpose: `maskable` },
+          {
+            src: `src/assets/images/asado-icon-150x150.png`,
+            purpose: `maskable`,
+            sizes: `150x150`,
+            type: `image/png`,
+          },
         ],
       },
     },
