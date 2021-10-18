@@ -23,7 +23,11 @@ const BgImages = ({ imgId, children }) => {
         allContentfulAsadoBarcelona {
           nodes {
             backgroundImages {
-              gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP]
+              )
             }
           }
         }
@@ -41,6 +45,7 @@ const BgImages = ({ imgId, children }) => {
       // Spread bgImage into BackgroundImage:
       {...bgImage}
       preserveStackingContext
+      fadeIn={false}
     >
       {children}
     </StyledBg>
