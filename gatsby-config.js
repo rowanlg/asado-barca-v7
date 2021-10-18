@@ -51,6 +51,11 @@ module.exports = {
         icon: `src/assets/images/asado-icon.png`,
         icons: [
           {
+            src: `src/assets/images/asado-icon.png`,
+            sizes: `3000x3000`,
+            type: `image/png`,
+          },
+          {
             src: `src/assets/images/asado-icon-150x150.png`,
             purpose: `maskable`,
             sizes: `150x150`,
