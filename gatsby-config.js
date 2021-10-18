@@ -38,5 +38,18 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Asado Barcelona`,
+        short_name: `AsadoBCN`,
+        start_url: `/`,
+        background_color: `#000000`,
+        theme_color: `#171717`,
+        display: `standalone`,
+        icon: `src/assets/images/asado-icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
