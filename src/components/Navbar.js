@@ -133,12 +133,16 @@ const Navbar = () => {
         />
         <div className="desktop-links">
           <a href="/#menu">Menu</a>
-          <a href="/#about">About</a>
-          <a href="/#book">Book</a>
-          <a href="https://ubereats.com" target="_blank" rel="noreferrer">
-            Delivery
+          <a href="/#about">Informacion</a>
+          <a href="/#book">Reservar</a>
+          <a
+            href="https://www.ubereats.com/es-en/store/asado-burger/XXyA6teISKeaOd0x5tBX5Q?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkNhcnJlciUyMGRlJTIwU2FndSVDMyVBOXMlMkMlMjAyNyUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpEelBpS0hhWXBCSVJjN2ZmQkt1dHVZSSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0MS4zOTQzMTQ4NjExMzMwMiUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuMTQ0ODY4ODQ2MTY4NjElN0Q%3D&ps=1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Entrega
           </a>
-          <a href="/#contact">Contact</a>
+          <a href="/#contact">Contacto</a>
         </div>
       </div>
       <div
@@ -148,12 +152,16 @@ const Navbar = () => {
         }}
       >
         <a href="/#menu">Menu</a>
-        <a href="/#about">About</a>
-        <a href="/#book">Book</a>
-        <a href="https://ubereats.com" target="_blank" rel="noreferrer">
-          Delivery
+        <a href="/#about">Informacion</a>
+        <a href="/#book">Reservar</a>
+        <a
+          href="https://www.ubereats.com/es-en/store/asado-burger/XXyA6teISKeaOd0x5tBX5Q?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkNhcnJlciUyMGRlJTIwU2FndSVDMyVBOXMlMkMlMjAyNyUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpEelBpS0hhWXBCSVJjN2ZmQkt1dHVZSSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0MS4zOTQzMTQ4NjExMzMwMiUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuMTQ0ODY4ODQ2MTY4NjElN0Q%3D&ps=1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Entrega
         </a>
-        <a href="/#contact">Contact</a>
+        <a href="/#contact">Contacto</a>
       </div>
     </Header>
   )

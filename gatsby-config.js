@@ -49,6 +49,9 @@ module.exports = {
         theme_color: `#171717`,
         display: `standalone`,
         icon: `src/assets/images/asado-icon.png`,
+        icons: [
+          { src: `src/assets/images/asado-icon.png`, purpose: `maskable` },
+        ],
       },
     },
     `gatsby-plugin-offline`,
