@@ -13,7 +13,7 @@ const Seo = () => {
         content="Asado Barcelona es el restaurante de hamburguesas gastrónomo más nuevo de Barcelona, ​​que sirve las mejores hamburguesas, con platos pequeños y cervezas."
       />
       <meta name="image" content={ImageCard} />
-      <link rel="canonical" href="https://www.asadobarcelona.com/" />
+      <link rel="canonical" href="https://asado-barcelona-v7.netlify.app/" />
     </Helmet>
   )
 }

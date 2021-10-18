@@ -53,7 +53,12 @@ const HomeSection = () => {
   return (
     <BgImages imgId={0}>
       <Home>
-        <a href={homePageLinkUrl} target="_blank" className="home-section-link">
+        <a
+          href={homePageLinkUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="home-section-link"
+        >
           <div className="link-box">{homePageLinkText}</div>
         </a>
       </Home>

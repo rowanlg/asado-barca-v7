@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"

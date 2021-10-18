@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { FiMenu, FiX } from "react-icons/fi"
 import Logo from "../assets/images/asado-logo-barcelona-2.svg"

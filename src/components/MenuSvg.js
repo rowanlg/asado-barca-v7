@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import BgImages from "./BgImages"
 
@@ -49,7 +48,7 @@ const MenuSvg = () => {
               src={image.file.url}
               key={index}
               className="svg-img"
-              alt={`Menu Image ${index + 1}`}
+              alt={`Menu ${index + 1}`}
             />
           )
         })}
