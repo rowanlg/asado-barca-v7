@@ -29,7 +29,6 @@ const Home = styled.section`
       padding: 1.8rem 1.5rem 1.5rem 1.5rem;
       font-size: 1.2rem;
       width: 300px;
-      font-display: swap;
     }
   }
 `
