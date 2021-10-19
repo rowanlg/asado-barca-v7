@@ -25,7 +25,7 @@ const Home = styled.section`
     font-size: 0.9rem;
     margin: auto;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     @media screen and (min-width: 460px) {
       border: 4px solid #fafafa;
       padding: 1.8rem 1.5rem 1.5rem 1.5rem;
@@ -56,7 +56,7 @@ const HomeSection = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true)
-    }, 1000)
+    }, 500)
     return () => clearTimeout(timer)
   }, [show])
 
@@ -72,7 +72,7 @@ const HomeSection = () => {
           <div className="link-box" style={show && { opacity: "100%" }}>
             {homePageLinkText}
           </div>
-          }{/* {show && <div className="link-box">{homePageLinkText}</div>} */}
+          {/* {show && <div className="link-box">{homePageLinkText}</div>} */}
         </a>
       </Home>
     </BgImages>
