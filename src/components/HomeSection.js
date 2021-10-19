@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import BgImages from "./BgImages"
@@ -24,6 +24,8 @@ const Home = styled.section`
     padding: 1.4rem 1.2rem 1.2rem 1.2rem;
     font-size: 0.9rem;
     margin: auto;
+    opacity: 0;
+    transition: all 0.5s ease;
     @media screen and (min-width: 460px) {
       border: 4px solid #fafafa;
       padding: 1.8rem 1.5rem 1.5rem 1.5rem;
@@ -49,7 +51,15 @@ const HomeSection = () => {
   const { homePageLinkText, homePageLinkUrl } =
     allContentfulAsadoBarcelona.nodes[0]
 
-  console.log(allContentfulAsadoBarcelona.nodes[0])
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShow(true)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [show])
+
   return (
     <BgImages imgId={0}>
       <Home>
@@ -59,7 +69,10 @@ const HomeSection = () => {
           rel="noreferrer"
           className="home-section-link"
         >
-          <div className="link-box">{homePageLinkText}</div>
+          <div className="link-box" style={show && { opacity: "100%" }}>
+            {homePageLinkText}
+          </div>
+          }{/* {show && <div className="link-box">{homePageLinkText}</div>} */}
         </a>
       </Home>
     </BgImages>
