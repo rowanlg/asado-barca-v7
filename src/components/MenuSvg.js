@@ -24,14 +24,11 @@ const MenuSection = styled.section`
   align-items: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  .menu-image {
-    max-width: 900px;
-    margin: 1rem 1rem 0 1rem;
-  }
   .svg-img {
     background-color: white;
     max-width: 900px;
     width: 90vw;
+    height: 100%;
     margin: 1rem;
   }
 `
