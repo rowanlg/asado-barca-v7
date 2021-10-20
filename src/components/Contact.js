@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { createRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import BgImages from "./BgImages"
 
@@ -37,40 +37,39 @@ const Section = styled.section`
   }
 `
 
-// // Hook
-// function useOnScreen(ref, rootMargin = "0px") {
-//   // State and setter for storing whether element is visible
-//   const [isIntersecting, setIntersecting] = useState(false)
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         // Update our state when observer callback fires
-//         setIntersecting(entry.isIntersecting)
-//       },
-//       {
-//         rootMargin,
-//       }
-//     )
-//     if (ref.current) {
-//       observer.observe(ref.current)
-//     }
-//     return () => {
-//       observer.unobserve(ref.current)
-//     }
-//   }, []) // Empty array ensures that effect is only run on mount and unmount
-//   return isIntersecting
-// }
-
 const Contact = () => {
   const [render, setRender] = useState(false)
+
+  const container = createRef()
+
+  const iframeObserver = new IntersectionObserver(onIframeIntersection, {
+    rootMargin: "100px 0px",
+    threshold: 0.25,
+  })
+
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (window && "IntersectionObserver" in window) {
+      if (container && container.current) {
+        iframeObserver.observe(container.current)
+      }
+    } else {
       setRender(true)
-    }, 500)
-    return () => {
-      clearTimeout(timer)
     }
-  }, [])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [container])
+
+  function onIframeIntersection(entries) {
+    if (!entries || entries.length <= 0) {
+      return
+    }
+
+    if (entries[0].isIntersecting) {
+      setRender(true)
+      iframeObserver.disconnect()
+    }
+  }
+
   const ThirdPartyIframe = () => {
     return (
       <iframe
@@ -85,14 +84,10 @@ const Contact = () => {
     )
   }
 
-  // const ref = useRef()
-  // const onScreen = useOnScreen(ref, "0px")
-
   return (
     <BgImages imgId={1}>
       <Section id="contact">
-        <div className="map-section" id="google-map">
-          {/* {onScreen && <ThirdPartyIframe />} */}
+        <div className="map-section" id="google-map" ref={container}>
           {render && <ThirdPartyIframe />}
         </div>
         <div className="info">
