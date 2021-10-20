@@ -37,31 +37,40 @@ const Section = styled.section`
   }
 `
 
-// Hook
-function useOnScreen(ref, rootMargin = "0px") {
-  // State and setter for storing whether element is visible
-  const [isIntersecting, setIntersecting] = useState(false)
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update our state when observer callback fires
-        setIntersecting(entry.isIntersecting)
-      },
-      {
-        rootMargin,
-      }
-    )
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-    return () => {
-      observer.unobserve(ref.current)
-    }
-  }, []) // Empty array ensures that effect is only run on mount and unmount
-  return isIntersecting
-}
+// // Hook
+// function useOnScreen(ref, rootMargin = "0px") {
+//   // State and setter for storing whether element is visible
+//   const [isIntersecting, setIntersecting] = useState(false)
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         // Update our state when observer callback fires
+//         setIntersecting(entry.isIntersecting)
+//       },
+//       {
+//         rootMargin,
+//       }
+//     )
+//     if (ref.current) {
+//       observer.observe(ref.current)
+//     }
+//     return () => {
+//       observer.unobserve(ref.current)
+//     }
+//   }, []) // Empty array ensures that effect is only run on mount and unmount
+//   return isIntersecting
+// }
 
 const Contact = () => {
+  const [render, setRender] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setRender(true)
+    }, 500)
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
   const ThirdPartyIframe = () => {
     return (
       <iframe
@@ -76,14 +85,15 @@ const Contact = () => {
     )
   }
 
-  const ref = useRef()
-  const onScreen = useOnScreen(ref, "0px")
+  // const ref = useRef()
+  // const onScreen = useOnScreen(ref, "0px")
 
   return (
     <BgImages imgId={1}>
       <Section id="contact">
-        <div className="map-section" id="google-map" ref={ref}>
-          {onScreen ? <ThirdPartyIframe /> : <div />}
+        <div className="map-section" id="google-map">
+          {/* {onScreen && <ThirdPartyIframe />} */}
+          {render && <ThirdPartyIframe />}
         </div>
         <div className="info">
           <h2>Asado Barcelona</h2>
