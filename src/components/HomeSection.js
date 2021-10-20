@@ -52,12 +52,18 @@ const HomeSection = () => {
     allContentfulAsadoBarcelona.nodes[0]
 
   const [show, setShow] = useState(false)
+  const [render, setRender] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShow(true)
+      setRender(true)
+      const timer2 = setTimeout(() => {
+        setShow(true)
+      }, 200)
     }, 500)
-    return () => clearTimeout(timer)
+    return () => {
+      clearTimeout(timer)
+    }
   }, [show])
 
   return (
@@ -69,9 +75,11 @@ const HomeSection = () => {
           rel="noreferrer"
           className="home-section-link"
         >
-          <div className="link-box" style={show && { opacity: "100%" }}>
-            {homePageLinkText}
-          </div>
+          {render && (
+            <div className="link-box" style={show && { opacity: "100%" }}>
+              {homePageLinkText}
+            </div>
+          )}
           {/* {show && <div className="link-box">{homePageLinkText}</div>} */}
         </a>
       </Home>
