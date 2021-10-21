@@ -42,12 +42,11 @@ const Contact = () => {
 
   const container = createRef()
 
-  const iframeObserver = new IntersectionObserver(onIframeIntersection, {
-    rootMargin: "100px 0px",
-    threshold: 0.25,
-  })
-
   useEffect(() => {
+    const iframeObserver = new IntersectionObserver(onIframeIntersection, {
+      rootMargin: "100px 0px",
+      threshold: 0.25,
+    })
     if (window && "IntersectionObserver" in window) {
       if (container && container.current) {
         iframeObserver.observe(container.current)
@@ -56,19 +55,18 @@ const Contact = () => {
       setRender(true)
     }
 
+    function onIframeIntersection(entries) {
+      if (!entries || entries.length <= 0) {
+        return
+      }
+
+      if (entries[0].isIntersecting) {
+        setRender(true)
+        iframeObserver.disconnect()
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [container])
-
-  function onIframeIntersection(entries) {
-    if (!entries || entries.length <= 0) {
-      return
-    }
-
-    if (entries[0].isIntersecting) {
-      setRender(true)
-      iframeObserver.disconnect()
-    }
-  }
 
   const ThirdPartyIframe = () => {
     return (
