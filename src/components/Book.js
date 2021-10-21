@@ -1,14 +1,13 @@
 import React from "react"
 import { useEffect, useState, useRef } from "react"
 import styled from "styled-components"
-import BgImages from "./BgImages"
 
 const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 900px;
+
   div {
     margin: 2rem 0;
     max-width: 90vw;
@@ -60,19 +59,17 @@ const Book = () => {
   // }, [])
 
   return (
-    <BgImages imgId={0}>
-      <Section id="book" ref={ref}>
-        {/* <div id="open-table" />  */}
-        {onScreen ? (
-          <script
-            type="text/javascript"
-            src="//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
-          ></script>
-        ) : (
-          <script />
-        )}
-      </Section>
-    </BgImages>
+    <Section id="book" ref={ref}>
+      {/* <div id="open-table" />  */}
+      {onScreen ? (
+        <script
+          type="text/javascript"
+          src="//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
+        ></script>
+      ) : (
+        <script />
+      )}
+    </Section>
   )
 }
 

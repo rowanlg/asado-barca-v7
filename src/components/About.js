@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import BgImages from "./BgImages"
+import Book from "./Book"
 
 const query = graphql`
   {
@@ -24,6 +25,12 @@ const Section = styled.section`
   div {
     margin: 2rem 0;
     max-width: 90vw;
+    text-align: center;
+    .divider {
+      width: 30vw;
+      border-top: 2px solid #fafafa;
+      margin: 3rem auto 0;
+    }
     @media screen and (min-width: 992px) {
       max-width: 900px;
     }
@@ -38,7 +45,9 @@ const About = () => {
       <Section id="about">
         <div>
           <p>{aboutText}</p>
+          <div className="divider"></div>
         </div>
+        <Book />
       </Section>
     </BgImages>
   )

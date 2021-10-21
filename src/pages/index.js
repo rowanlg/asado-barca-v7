@@ -4,7 +4,6 @@ import "normalize.css"
 import HomeSection from "../components/HomeSection"
 import MenuSvg from "../components/MenuSvg"
 import About from "../components/About"
-import Book from "../components/Book"
 import Contact from "../components/Contact"
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
       <HomeSection />
       <MenuSvg />
       <About />
-      <Book />
       <Contact />
     </Layout>
   )
