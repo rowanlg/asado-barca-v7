@@ -22,6 +22,16 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 900px;
+  a {
+    border: 2px solid #fafafa;
+    padding: 15px 18px 12px 18px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fafafa;
+    :hover {
+      background-color: #000;
+    }
+  }
   div {
     margin: 2rem 0;
     max-width: 90vw;
@@ -47,7 +57,14 @@ const About = () => {
           <p>{aboutText}</p>
           <div className="divider"></div>
         </div>
-        <Book />
+        {/* <Book /> */}
+        <a
+          href=" https://module.lafourchette.com/es_ES/module/716072-20c2d "
+          target="_blank"
+          rel="noopener"
+        >
+          Reserva una mesa
+        </a>
       </Section>
     </BgImages>
   )
