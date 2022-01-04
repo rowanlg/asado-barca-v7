@@ -83,7 +83,7 @@ const Contact = () => {
   }
 
   return (
-    <BgImages imgId={0}>
+    <BgImages imgId={3}>
       <Section id="contact">
         <div className="map-section" id="google-map" ref={container}>
           {render && <ThirdPartyIframe />}
