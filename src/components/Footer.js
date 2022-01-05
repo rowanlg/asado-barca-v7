@@ -38,6 +38,7 @@ const Footer = () => {
         href="https://www.instagram.com/asadobcn/?hl=es"
         target="_blank"
         rel="noreferrer"
+        data-no-translation
       >
         <FiInstagram />
         asadobcn
@@ -46,6 +47,7 @@ const Footer = () => {
         href="https://www.instagram.com/asadoburgers/?hl=es"
         target="_blank"
         rel="noreferrer"
+        data-no-translation
       >
         <FiInstagram />
         asadoburgers

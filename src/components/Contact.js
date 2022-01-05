@@ -88,7 +88,7 @@ const Contact = () => {
         <div className="map-section" id="google-map" ref={container}>
           {render && <ThirdPartyIframe />}
         </div>
-        <div className="info">
+        <div className="info" data-no-translation>
           <h2>Asado Barcelona</h2>
           <p>Passatge de Lluís Pellicer, 12, 08036 Barcelona, Spain</p>
           <p>+34 934 19 65 90</p>

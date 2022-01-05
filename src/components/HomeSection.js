@@ -6,13 +6,13 @@ import BgImages from "./BgImages"
 const Home = styled.section`
   width: 100vw;
   height: 100vh;
-  margin-top: -96px;
+  margin-top: -102px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   @media screen and (min-width: 460px) {
-    margin-top: -116px;
+    margin-top: -121px;
   }
   .home-section-link {
     text-decoration: none;
@@ -26,6 +26,7 @@ const Home = styled.section`
     margin: auto;
     opacity: 0;
     transition: all 1s ease;
+    border-radius: 3px;
     @media screen and (min-width: 460px) {
       border: 4px solid #fafafa;
       padding: 1.8rem 1.5rem 1.5rem 1.5rem;
