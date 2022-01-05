@@ -17,11 +17,18 @@ const Section = styled.section`
     }
   }
   .map-section {
+    width: 90vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
     iframe {
       width: 90vw;
       height: 70vw;
       max-width: 400px;
       max-height: 300px;
+      border-radius: 3px;
     }
   }
   .info {
