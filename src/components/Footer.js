@@ -38,7 +38,8 @@ const Footer = () => {
         href="https://www.instagram.com/asadobcn/?hl=es"
         target="_blank"
         rel="noreferrer"
-        data-no-translation
+        translate="no"
+        class="notranslate"
       >
         <FiInstagram />
         asadobcn
@@ -47,7 +48,8 @@ const Footer = () => {
         href="https://www.instagram.com/asadoburgers/?hl=es"
         target="_blank"
         rel="noreferrer"
-        data-no-translation
+        translate="no"
+        class="notranslate"
       >
         <FiInstagram />
         asadoburgers
