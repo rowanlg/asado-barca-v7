@@ -57,14 +57,14 @@ const About = () => {
           <p>{aboutText}</p>
           <div className="divider"></div>
         </div>
-        {/* <Book /> */}
-        <a
+        <Book />
+        {/* <a
           href=" https://module.lafourchette.com/es_ES/module/716072-20c2d "
           target="_blank"
           rel="noopener"
         >
           Reserva una mesa
-        </a>
+        </a> */}
       </Section>
     </BgImages>
   )

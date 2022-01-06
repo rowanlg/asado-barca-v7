@@ -48,27 +48,62 @@ const Book = () => {
   // useEffect(() => {
   //   const scriptTag = document.createElement("script")
 
-  //   scriptTag.src =
-  //     "//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
+  //   scriptTag.src = "https://booking.resdiary.com/bundles/WidgetV2Loader.js"
   //   scriptTag.async = true
 
-  //   document.getElementById("open-table").appendChild(scriptTag)
+  //   document.getElementById("rd-widget-frame").appendChild(scriptTag)
   //   return () => {
-  //     document.getElementById("open-table").removeChild(scriptTag)
+  //     document.getElementById("rd-widget-frame").removeChild(scriptTag)
   //   }
   // }, [])
 
   return (
     <Section id="book" ref={ref}>
-      {/* <div id="open-table" />  */}
-      {onScreen ? (
-        <script
-          type="text/javascript"
-          src="//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
-        ></script>
+      {/* <div id="open-table" />
+      <div id="rd-widget-frame" style={{ maxWidth: "600px", margin: "auto" }} /> */}
+      {/* <>
+          <input
+            id="rdwidgeturl"
+            name="rdwidgeturl"
+            value="https://booking.resdiary.com/widget/Standard/Asado5/30856?includeJquery=false"
+            type="hidden"
+          />
+          <script
+            type="text/javascript"
+            src="https://booking.resdiary.com/bundles/WidgetV2Loader.js"
+          ></script>
+          <scripts
+            type="text/javascript"
+            src="//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
+          ></scripts>
+        </> */}
+      <iframe
+        src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
+        allowtransparency="true"
+        frameborder="0"
+        style={{
+          width: "100%",
+          border: "none",
+          maxWidth: "540px",
+          height: "640px",
+        }}
+      ></iframe>
+
+      {/* {onScreen ? (
+        <iframe
+          src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
+          allowtransparency="true"
+          frameborder="0"
+          style={{
+            width: "100%",
+            border: "none",
+            maxWidth: "540px",
+            height: "640px",
+          }}
+        ></iframe>
       ) : (
-        <script />
-      )}
+        <iframe />
+      )} */}
     </Section>
   )
 }
