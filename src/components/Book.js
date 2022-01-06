@@ -1,5 +1,5 @@
 import React from "react"
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, createRef } from "react"
 import styled from "styled-components"
 
 const Section = styled.section`
@@ -9,11 +9,16 @@ const Section = styled.section`
   align-items: center;
 
   div {
-    margin: 2rem 0;
-    max-width: 90vw;
-    @media screen and (min-width: 992px) {
-      max-width: 900px;
-    }
+    margin: 1rem 0;
+    width: 90vw;
+    max-width: 540px;
+    height: 640px;
+    display: flex;
+    border-radius: 3px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
   }
 `
 
@@ -45,17 +50,51 @@ const Book = () => {
   const ref = useRef()
   const onScreen = useOnScreen(ref, "0px")
 
-  // useEffect(() => {
-  //   const scriptTag = document.createElement("script")
+  const [render, setRender] = useState(false)
 
-  //   scriptTag.src = "https://booking.resdiary.com/bundles/WidgetV2Loader.js"
-  //   scriptTag.async = true
+  const container = createRef()
 
-  //   document.getElementById("rd-widget-frame").appendChild(scriptTag)
-  //   return () => {
-  //     document.getElementById("rd-widget-frame").removeChild(scriptTag)
-  //   }
-  // }, [])
+  useEffect(() => {
+    const iframeObserver = new IntersectionObserver(onIframeIntersection, {
+      rootMargin: "100px 0px",
+      threshold: 0.25,
+    })
+    if (window && "IntersectionObserver" in window) {
+      if (container && container.current) {
+        iframeObserver.observe(container.current)
+      }
+    } else {
+      setRender(true)
+    }
+
+    function onIframeIntersection(entries) {
+      if (!entries || entries.length <= 0) {
+        return
+      }
+
+      if (entries[0].isIntersecting) {
+        setRender(true)
+        iframeObserver.disconnect()
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [container])
+
+  const ThirdPartyIframe = () => {
+    return (
+      <iframe
+        src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
+        allowtransparency="true"
+        frameborder="0"
+        style={{
+          width: "100%",
+          border: "none",
+          maxWidth: "540px",
+          height: "640px",
+        }}
+      />
+    )
+  }
 
   return (
     <Section id="book" ref={ref}>
@@ -77,17 +116,20 @@ const Book = () => {
             src="//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
           ></scripts>
         </> */}
-      <iframe
+      {/* <iframe
         src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
         allowtransparency="true"
         frameborder="0"
         style={{
-          width: "100%",
+          width: "75%",
           border: "none",
           maxWidth: "540px",
           height: "640px",
         }}
-      ></iframe>
+      ></iframe> */}
+      <div className="reservation-section" ref={container}>
+        {render && <ThirdPartyIframe />}
+      </div>
 
       {/* {onScreen ? (
         <iframe

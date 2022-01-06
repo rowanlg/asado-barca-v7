@@ -22,6 +22,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 900px;
+  padding: 2rem 0;
   a {
     border: 2px solid #fafafa;
     padding: 15px 18px 12px 18px;
@@ -36,10 +37,13 @@ const Section = styled.section`
     margin: 2rem 0;
     max-width: 90vw;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .divider {
       width: 30vw;
       border-top: 2px solid #fafafa;
-      margin: 3rem auto 0;
+      margin: 0rem auto 0.5rem;
     }
     @media screen and (min-width: 992px) {
       max-width: 900px;
@@ -54,10 +58,11 @@ const About = () => {
     <BgImages imgId={2}>
       <Section id="about">
         <div>
+          <h2>Reservar una Mesa</h2>
+          <Book />
+          {/* <div className="divider"></div> */}
           <p>{aboutText}</p>
-          <div className="divider"></div>
         </div>
-        <Book />
         {/* <a
           href=" https://module.lafourchette.com/es_ES/module/716072-20c2d "
           target="_blank"
