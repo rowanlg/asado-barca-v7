@@ -15,41 +15,14 @@ const Section = styled.section`
     height: 640px;
     display: flex;
     border-radius: 3px;
-    flex-direction: column;
+    padding-top: 1rem;
     justify-content: center;
     align-items: center;
     background-color: #fff;
   }
 `
 
-// Hook
-function useOnScreen(ref, rootMargin = "0px") {
-  // State and setter for storing whether element is visible
-  const [isIntersecting, setIntersecting] = useState(false)
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update our state when observer callback fires
-        setIntersecting(entry.isIntersecting)
-      },
-      {
-        rootMargin,
-      }
-    )
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-    return () => {
-      observer.unobserve(ref.current)
-    }
-  }, []) // Empty array ensures that effect is only run on mount and unmount
-  return isIntersecting
-}
-
 const Book = () => {
-  const ref = useRef()
-  const onScreen = useOnScreen(ref, "0px")
-
   const [render, setRender] = useState(false)
 
   const container = createRef()
@@ -97,55 +70,10 @@ const Book = () => {
   }
 
   return (
-    <Section id="book" ref={ref}>
-      {/* <div id="open-table" />
-      <div id="rd-widget-frame" style={{ maxWidth: "600px", margin: "auto" }} /> */}
-      {/* <>
-          <input
-            id="rdwidgeturl"
-            name="rdwidgeturl"
-            value="https://booking.resdiary.com/widget/Standard/Asado5/30856?includeJquery=false"
-            type="hidden"
-          />
-          <script
-            type="text/javascript"
-            src="https://booking.resdiary.com/bundles/WidgetV2Loader.js"
-          ></script>
-          <scripts
-            type="text/javascript"
-            src="//www.opentable.com/widget/reservation/loader?rid=237078&type=standard&theme=standard&iframe=true&domain=com&lang=es-MX&newtab=false&ot_source=Restaurant%20website"
-          ></scripts>
-        </> */}
-      {/* <iframe
-        src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
-        allowtransparency="true"
-        frameborder="0"
-        style={{
-          width: "75%",
-          border: "none",
-          maxWidth: "540px",
-          height: "640px",
-        }}
-      ></iframe> */}
+    <Section id="book">
       <div className="reservation-section" ref={container}>
         {render && <ThirdPartyIframe />}
       </div>
-
-      {/* {onScreen ? (
-        <iframe
-          src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
-          allowtransparency="true"
-          frameborder="0"
-          style={{
-            width: "100%",
-            border: "none",
-            maxWidth: "540px",
-            height: "640px",
-          }}
-        ></iframe>
-      ) : (
-        <iframe />
-      )} */}
     </Section>
   )
 }
