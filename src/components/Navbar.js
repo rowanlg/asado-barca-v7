@@ -143,7 +143,7 @@ const Navbar = () => {
             Reservar
           </a>
           <a
-            href="https://www.ubereats.com/es-en/store/asado-burger/XXyA6teISKeaOd0x5tBX5Q?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkNhcnJlciUyMGRlJTIwU2FndSVDMyVBOXMlMkMlMjAyNyUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpEelBpS0hhWXBCSVJjN2ZmQkt1dHVZSSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0MS4zOTQzMTQ4NjExMzMwMiUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuMTQ0ODY4ODQ2MTY4NjElN0Q%3D&ps=1"
+            href="https://delivery.asadobarcelona.com/"
             target="_blank"
             rel="noreferrer"
             translate="no"
@@ -172,7 +172,7 @@ const Navbar = () => {
           Reservar
         </a>
         <a
-          href="https://www.ubereats.com/es-en/store/asado-burger/XXyA6teISKeaOd0x5tBX5Q?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkNhcnJlciUyMGRlJTIwU2FndSVDMyVBOXMlMkMlMjAyNyUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpEelBpS0hhWXBCSVJjN2ZmQkt1dHVZSSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0MS4zOTQzMTQ4NjExMzMwMiUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuMTQ0ODY4ODQ2MTY4NjElN0Q%3D&ps=1"
+          href="https://delivery.asadobarcelona.com/"
           target="_blank"
           rel="noreferrer"
           translate="no"
