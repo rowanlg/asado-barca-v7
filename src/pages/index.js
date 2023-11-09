@@ -11,7 +11,7 @@ export default function Home() {
     <Layout>
       <HomeSection />
       <MenuJpeg />
-      <About />
+      {/* <About /> */}
       <Contact />
     </Layout>
   )

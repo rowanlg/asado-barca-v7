@@ -8,11 +8,25 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
 
-  div {
+  .reservationWidgetContainer {
+    font-family: "BebasNeue";
+  }
+
+  .widgets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 656px) {
+      flex-direction: row;
+    }
+  }
+
+  .reservation-section {
     margin: 1rem 0;
+    padding: 1rem;
     width: 90vw;
-    max-width: 540px;
-    height: 640px;
     display: flex;
     border-radius: 3px;
     padding-top: 1rem;
@@ -55,17 +69,30 @@ const Book = () => {
 
   const ThirdPartyIframe = () => {
     return (
-      <iframe
-        src="https://booking.resdiary.com/widget/Standard/Asado5/30856"
-        allowtransparency="true"
-        frameborder="0"
-        style={{
-          width: "100%",
-          border: "none",
-          maxWidth: "540px",
-          height: "640px",
-        }}
-      />
+      <div className="widgets">
+        <iframe
+          src="https://reservation.dish.co/widget/hydra-1ff55e9d-3583-4444-bebe-f6f018b6470c"
+          allowtransparency="true"
+          frameborder="0"
+          style={{
+            width: "100%",
+            border: "none",
+            maxWidth: "540px",
+            height: "500px",
+          }}
+        />
+        <iframe
+          src="https://reservation.dish.co/widget/hydra-09f6ee7b-c434-42a2-9353-042ceaf18f21"
+          allowtransparency="true"
+          frameborder="0"
+          style={{
+            width: "100%",
+            border: "none",
+            maxWidth: "540px",
+            height: "500px",
+          }}
+        />
+      </div>
     )
   }
 

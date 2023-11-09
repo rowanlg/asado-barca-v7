@@ -2,23 +2,20 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FiMenu, FiX } from "react-icons/fi"
-import Logo from "../assets/images/asado-logo-barcelona-2.svg"
+import Logo from "../assets/images/2023-logo-cream.png"
 
 const Header = styled.header`
   width: 100vw;
+  font-family: "BebasNeue";
   .asado-img-link {
     z-index: 98;
   }
   img {
-    margin-top: 1rem;
+    margin-top: 2rem;
     z-index: 98;
-    height: 80px;
-    width: 80px;
-    max-height: 80px;
+    width: 120px;
     @media screen and (min-width: 460px) {
-      height: 100px;
-      width: 100px;
-      max-height: 100px;
+      width: 150px;
     }
   }
   .nav-container {
@@ -37,6 +34,8 @@ const Header = styled.header`
     margin: auto 0;
     cursor: pointer;
     z-index: 100;
+    position: relative;
+    top: 12px;
     @media screen and (min-width: 460px) {
       font-size: 3rem;
     }

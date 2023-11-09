@@ -2,3 +2,7 @@
   font-family: "Dker";
   src: url("../fonts/Dker-Poster.woff");
 }
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeueRegular.woff");
+}
