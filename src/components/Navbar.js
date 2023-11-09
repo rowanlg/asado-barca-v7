@@ -161,14 +161,11 @@ const Navbar = () => {
         <a href="/#menu" class="notranslate">
           Menu
         </a>
-        <a href="/#about" class="notranslate">
-          Informacion
-        </a>
-        <a href="/#about" translate="no" class="notranslate">
+        <a href="/#contact" translate="no" class="notranslate">
           Reservar
         </a>
         <a
-          href="https://delivery.asadobarcelona.com/"
+          href="https://www.ubereats.com/es/store/asado-burger/XXyA6teISKeaOd0x5tBX5Q?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkJTMzIlMjA0SlQlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKdVlkcVEtQ1FjVWdSdm1KSVBueEg4V00lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNTEuNTQ4ODQzNiUyQyUyMmxvbmdpdHVkZSUyMiUzQS0yLjU1MjgwNDYlN0Q%3D"
           target="_blank"
           rel="noreferrer"
           translate="no"
