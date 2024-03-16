@@ -154,7 +154,7 @@ const Contact = () => {
           <div className="info" translate="no" class="notranslate">
             <h2>Asado Passeig de Sant Joan</h2>
             <p>C/ del Consell de Cent, 414, 08009 Barcelona, Spain</p>
-            <p>+34 934 19 65 90</p>
+            <p>+34 933 051 871</p>
           </div>
           <div
             className="reserve-button"
