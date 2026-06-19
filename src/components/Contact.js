@@ -109,20 +109,6 @@ const Contact = () => {
     )
   }
 
-  const AsadoSantJoanMap = () => {
-    return (
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d324.43706073176776!2d2.1736634061879823!3d41.3969686741472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a357b4df9297%3A0xe4360c237ecb5ad5!2sAsado%20Burgers!5e0!3m2!1sen!2suk!4v1699299281716!5m2!1sen!2suk"
-        frameBorder="0"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        aria-hidden="false"
-        tabIndex="0"
-        title="Location"
-      />
-    )
-  }
-
   return (
     <BgImages imgId={3}>
       <Section id="contact">
@@ -140,27 +126,6 @@ const Contact = () => {
             onClick={() =>
               window.open(
                 "https://reservation.dish.co/widget/hydra-1ff55e9d-3583-4444-bebe-f6f018b6470c",
-                "_blank"
-              )
-            }
-          >
-            Reservar una Mesa
-          </div>
-        </div>
-        <div className="map-container">
-          <div className="map-section" id="google-map" ref={container}>
-            {render && <AsadoSantJoanMap />}
-          </div>
-          <div className="info" translate="no" class="notranslate">
-            <h2>Asado Passeig de Sant Joan</h2>
-            <p>C/ del Consell de Cent, 414, 08009 Barcelona, Spain</p>
-            <p>+34 933 051 871</p>
-          </div>
-          <div
-            className="reserve-button"
-            onClick={() =>
-              window.open(
-                "https://reservation.dish.co/widget/hydra-09f6ee7b-c434-42a2-9353-042ceaf18f21",
                 "_blank"
               )
             }
